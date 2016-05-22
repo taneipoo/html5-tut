@@ -24,14 +24,14 @@ String.fromCharCode()
 */
 
 function rot13(str) { // LBH QVQ VG!
-  
-  return str;
+	console.log(str.charCodeAt(0));
+	return str;
 }
 
 // Change the inputs below to test
 console.log(rot13("SERR PBQR PNZC"));
-console.log(rot13("SERR PBQR PNZC")); //returns "FREE CODE CAMP"
+/*console.log(rot13("SERR PBQR PNZC")); //returns "FREE CODE CAMP"
 console.log(rot13("SERR CVMMN!")); //returns "FREE PIZZA!"
 console.log(rot13("SERR YBIR?")); //returns "FREE LOVE?"
-console.log(rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK."));
+console.log(rot13("GUR DHVPX OEBJA QBT WHZCRQ BIRE GUR YNML SBK."));*/
 //returns "THE QUICK BROWN DOG JUMPED OVER THE LAZY FOX."
