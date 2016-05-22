@@ -28,7 +28,8 @@ function rot13(str) { // LBH QVQ VG!
 	var eStr = str.split("");
 	var dec = eStr.map(function (val) {
 		//console.log (val);
-		if (val.charCodeAt() >= 65 && val.charCodeAt() <=77) {
+		if (val.charCodeAt() >= 65 && val.charCodeAt() <=77) { 
+			//check only the letters
 			//console.log ("Inside IF: ", val, String.fromCharCode(val.charCodeAt()+13));
 			val = String.fromCharCode(val.charCodeAt()+13);
 		} else 
@@ -37,13 +38,12 @@ function rot13(str) { // LBH QVQ VG!
 			val = String.fromCharCode(val.charCodeAt()-13);
 		} return val;
 	});
-	//console.log(eStr, nStr);
 	//console.log("This is +13: ", String.fromCharCode(str.charCodeAt(0)+13));
 	return dec.join("");
 }
 
 // Change the inputs below to test
-console.log(rot13(";"));
+//console.log(rot13(";"));
 console.log(rot13("SERR PBQR PNZC")); //returns "FREE CODE CAMP"
 console.log(rot13("SERR CVMMN!")); //returns "FREE PIZZA!"
 console.log(rot13("SERR YBIR?")); //returns "FREE LOVE?"
