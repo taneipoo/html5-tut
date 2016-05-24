@@ -1,0 +1,23 @@
+{
+    "success": {
+        "total": 1
+    },
+    "contents": {
+        "quotes": [
+            {
+                "quote": "When it comes to winning, you need the skill and the will.",
+                "length": "58",
+                "author": "Frank Tyger",
+                "tags": [
+                    "inspire",
+                    "winning"
+                ],
+                "category": "inspire",
+                "date": "2016-05-24",
+                "title": "Inspiring Quote of the day",
+                "background": "https://theysaidso.com/img/bgs/man_on_the_mountain.jpg",
+                "id": "Ybi_ZYd7MoxkHdjoGXvcnweF"
+            }
+        ]
+    }
+}

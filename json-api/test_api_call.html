@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My First API Call</title>
+	<script type="text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	<script>
+	/*
+		$.getJSON("http://quotes.rest/qod.json", function(qdRes) {
+			console.info("It worked!!!", qdRes);
+			$.each(qdRes, function (key, val) {
+				$("ul").append("<li>"+val.quote+"</li>")
+			});
+		});
+		*/
+
+		$.ajax({
+			url: 'http://rest.learncode.academy/api/willis/friends',
+			type: 'get',
+			dataType: 'json',
+			cache: false,
+			success: function (qdRes) {
+				$(qdRes).each(function (idx, val) {
+					 console.log("Did it work?", val);
+				})
+			}
+		})
+		.done(function() {
+			console.log("success");
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		.always(function() {
+			console.log("complete");
+		});
+		
+	</script>
+
+</head>
+<body>
+<!--
+[selector].getJSON( URL, [data], [callback] );
+
+URL − The URL of the server-side resource contacted via the GET method.
+
+data − An object whose properties serve as the name/value pairs used to construct a query string to be appended to the URL, or a preformatted and encoded query string.
+
+callback − A function invoked when the request completes. The data value resulting from digesting the response body as a JSON string is passed as the first parameter to this callback, and the status as the second.
+-->
+
+</body>
+</html>
