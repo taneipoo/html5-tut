@@ -1,22 +1,176 @@
 {
-    "success": {
-        "total": 1
-    },
-    "contents": {
-        "quotes": [
+    "quotes": 
+    {
+        "inspirational":
+        [
             {
-                "quote": "When it comes to winning, you need the skill and the will.",
-                "length": "58",
-                "author": "Frank Tyger",
-                "tags": [
-                    "inspire",
-                    "winning"
-                ],
-                "category": "inspire",
-                "date": "2016-05-24",
-                "title": "Inspiring Quote of the day",
-                "background": "https://theysaidso.com/img/bgs/man_on_the_mountain.jpg",
-                "id": "Ybi_ZYd7MoxkHdjoGXvcnweF"
+                "quote":"The best preparation for tomorrow is doing you best today",
+                "author":"H. Jackson Brown, Jr."
+            },
+            {
+                "quote":"The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.",
+                "author":"Helen Keller"
+            },
+            {
+                "quote":"Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible.",
+                "author":"Francis of Assisi"
+            },  
+            {
+                "quote":"I can't change the direction of the wind, but I can adjust my sails to always reach my destination.",
+                "author":"Jimmy Dean"
+            },
+            {
+                "quote":"Try to be a rainbow in someone's cloud.",
+                "author":"Maya Angelou"
+            },
+            {
+                "quote":"We know what we are, but know not what we may be.",
+                "author":"William Shakespeare"
+            },
+            {
+                "quote":"We must let go of the life we have planned, so as to accept the one that is waiting for us.",
+                "author":"Joseph Campbell"
+            },
+            {
+                "quote":"Courage is what it takes to stand up & speak.  Courage is also what it takes to sit down & listen.",
+                "author":"Sir Winston Churchill"
+            },
+            {
+                "quote":"All our dreams can come true if we have the courage to pursue them.",
+                "author":"Walt Disney"
+            }
+        ],
+
+        "success": 
+        [
+            {
+                "quote":"If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success.",
+                "author":"James Cameron"
+            },
+            {
+                "quote":"Entrepreneurs average 3.8 failures before final success. What sets the successful ones apart is their amazing persistence.",
+                "author":"Lisa M. Amos"
+            },
+            {
+                "quote":"If you are not willing to risk the usual, you will have to settle for the ordinary.",
+                "author":"Jim Rohn"
+            },
+            {
+                "quote":"Success usually comes to those who are too busy to be looking for it.",
+                "author":"Henry David Thoreau"
+            },
+            {
+                "quote":"Things work out best for those who make the best of how things work out.",
+                "author":"John Wooden"
+            },
+            {
+                "quote":"Stop chasing the money and start chasing the passion.",
+                "author":"Tony Hsieh"
+            },
+            {
+                "quote":"If you are willing to do more than you are paid to do, eventually you will be paid to do more than you do.",
+                "author":"Anonymous"
+            },
+            {
+                "quote":"Success is walking from failure to failure with no loss of enthusiasm.",
+                "author":"Winston Churchill"
+            },
+            {
+                "quote":"The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle",
+                "author":"Steve Jobs"
+            },
+
+            {
+                "quote":"Whenever you see a successful person, you only see the public glories, never the private sacrifices to reach them.",
+                "author":"Vaibhav Shah"
+            }
+        ],
+
+        "life":
+        [
+            {
+                "quote":"Life is really simple, but we insist on making it complicated.",
+                "author":"Confucius"
+            },
+            {
+                "quote":"Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.",
+                "author":"Buddha"
+            },
+            {
+                "quote":"Life is ten percent what happens to you and ninety percent how you respond to it.",
+                "author":"Lou Holtz"
+            },
+            {
+                "quote":"The most important thing is to enjoy your life - to be happy - it's all that matters.",
+                "author":"Audrey Hepburn"
+            },
+            {
+                "quote":"Life isn't about finding yourself. Life is about creating yourself.",
+                "author":"George Bernard Shaw"
+            },
+            {
+                "quote":"We do not remember days, we remember moments.",
+                "author":"Cesare Pavese"
+            },
+            {
+                "quote":"Very little is needed to make a happy life; it is all within yourself, in your way of thinking.",
+                "author":"Marcus Aurelius"
+            },
+            {
+                "quote":"Life is a dream for the wise, a game for the fool, a comedy for the rich, a tragedy for the poor.",
+                "author":"Sholom Aleichem"
+            },
+            {
+                "quote":"In the end, it's not the years in your life that count. It's the life in your years.",
+                "author":"Abraham Lincoln"
+            },
+            {
+                "quote":"Let yourself be silently drawn by the strange pull of what you really love.",
+                "author":"Rumi"
+            }
+        ],
+
+        "funny": 
+        [
+            {
+                "quote":"Do not take life too seriously. You will never get out of it alive.",
+                "author":"Elbert Hubbard"
+            },
+            {
+                "quote":"We are all here on earth to help others; what on earth the others are here for I don't know.",
+                "author":"W. H. Auden"
+            },
+            {
+                "quote":"People who think they know everything are a great annoyance to those of us who do.",
+                "author":"Isaac Asimov"
+            },
+            {
+                "quote":"A woman's mind is cleaner than a man's: She changes it more often.",
+                "author":"Oliver Herford"
+            },
+            {
+                "quote":"Always remember that you are absolutely unique. Just like everyone else.",
+                "author":"Margaret Mead"
+            },
+            {
+                "quote":"I believe that if life gives you lemons, you should make lemonade... And try to find somebody whose life has given them vodka, and have a party.",
+                "author":"Ron White"
+            },
+            {
+                "quote":"If you haven't got anything nice to say about anybody, come sit next to me.",
+                "author":"Alice Roosevelt Longworth"
+            },
+            {
+                "quote":"Get your facts first, then you can distort them as you please.",
+                "author":"Mark Twain"
+            },
+            {
+                "quote":"I'm sorry, if you were right, I'd agree with you.",
+                "author":"Robin Williams"
+            },
+            {
+                "quote":"A successful man is one who makes more money than his wife can spend. A successful woman is one who can find such a man.",
+                "author":"Lana Turner"
             }
         ]
     }

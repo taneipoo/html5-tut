@@ -5,23 +5,44 @@
 	<script type="text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 	<script>
-	/*
-		$.getJSON("http://quotes.rest/qod.json", function(qdRes) {
-			console.info("It worked!!!", qdRes);
-			$.each(qdRes, function (key, val) {
-				$("ul").append("<li>"+val.quote+"</li>")
-			});
-		});
-		*/
 
+		$.getJSON('http://localhost:8080/jsFiles/qod.json', function(qdRes) {
+			//get all data from json doc
+			//  console.info("It worked!!!", qdRes);
+
+			var items = [];
+
+			$.each(qdRes.quotes, function(key, val) {
+				//take key: quotes & all values: inspirationa, success, life, funny
+				console.info("key: ", key, "; val: ", val.length);
+				$.each(val, function(key2, val2) {
+					//take all key2: inspirational, success, life, funny & check their values: [quote & author]
+					//console.info("KEY2: ", key2, "; VAL2: ", val2.author);
+
+					items.push( "<li id='" + key2 + "'>" + "<b>" + val2.author + "</b>" + ":-\t\t" + val2.quote + "</li>" );
+					//put all the key2 & their values store to times[] & save values within them
+				});
+				//console.log(items.length);
+			});
+
+			$( "<ul/>", {
+				"class": "my-new-list",
+				html: items[Math.floor(Math.random() * items.length)] 
+				//NOTES:- select one item from the list of items to display randomly
+				//html: items.join( "" )
+			}).appendTo( "body" );
+			//console.info(items.length, items[0])	
+		});
+		
+/*
 		$.ajax({
-			url: 'http://rest.learncode.academy/api/willis/friends',
+			url: 'http://localhost:8080/jsFiles/qod.json',
 			type: 'get',
 			dataType: 'json',
 			cache: false,
 			success: function (qdRes) {
 				$(qdRes).each(function (idx, val) {
-					 console.log("Did it work?", val);
+					 console.log(val.quotes.funny[0].quote, "\n\t ---", val.quotes.funny[0].author);
 				})
 			}
 		})
@@ -29,15 +50,17 @@
 			console.log("success");
 		})
 		.fail(function() {
-			console.log("error");
+			console.log(new Error().stack);
 		})
 		.always(function() {
 			console.log("complete");
 		});
-		
+		*/		
 	</script>
 
 </head>
+
+<div class="my-new-list"></div>
 <body>
 <!--
 [selector].getJSON( URL, [data], [callback] );
