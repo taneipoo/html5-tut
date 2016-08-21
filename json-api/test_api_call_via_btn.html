@@ -10,46 +10,101 @@
 	<script type="text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 	<script>
+		var items = [];
+		var quoteIDX = 0;
 		$(document).ready(function() {
-			$("#apiBtn").click(function(event){
+			$("#apiBtn").click(function(event) {
 
-				$.getJSON('https://api.myjson.com/bins/x6ck', function(qdRes) {
+				//$.getJSON('https://api.myjson.com/bins/x6ck', function(qdRes) {
+					$.getJSON('https://api.myjson.com/bins/1egfa', function(qdRes) {
 			//get all data from json doc
 
-			var items = [];
-
 			$.each(qdRes.quotes, function(key, val) {
-				//take key: quotes & all values: inspirationa, success, life, funny
+				//take key: quotes & all values: inspirational, success, life, funny
 				//console.info("key: ", key, "; val: ", val.length);
-
 				$.each(val, function(key2, val2) {
-					//take all key2: inspirational, success, life, funny & check their values: [quote & author]
+					//take all key2: inspirational, success, life, funny & check  their values: [quote & author]
 
-					items.push(key + ": " + "<b>" + val2.author + "</b>" 
-						+ ":-\t\t" + val2.quote);
+					items.push("<blockquote><b>" + val2.quote
+						+ "</b><p id='authors'>-- " + val2.author + "</p>" + "</blockquote>");
 					//put all the key2 & their values store to times[] & save values within them
 				});
 			});
 
-			$('#api-test').html('<p>' + items[Math.floor(Math.random() * items.length)] + '</p>');
-		});	
-			});
+			quoteIDX = Math.floor(Math.random() * items.length);
+
+			console.log(quoteIDX); //what's the index?
+			console.info(items[quoteIDX]); //internal test for item to be pushed to twitter & on screen
+
+			$('#api-test').html(items[quoteIDX]); 
+
+			var txtCont = items[quoteIDX];
+			var sTxt = $(txtCont).text(); //remove all html tags before passing to twitter
+			$('#randomTweet').attr('href', 'https://twitter.com/intent/tweet?text=' + sTxt);				
+		//$('#api-test').html(items[Math.floor(Math.random() * items.length)]);
+	});	
+				});
 		});
+
+		function getRandomColor () {
+			var hex = Math.floor(Math.random() * 0xFFFFFF);
+			return "#" + ("000000" + hex.toString(16)).substr(-6);
+		}
 	</script>
+
+	<style>
+		blockquote {
+			border-left: none;
+		}
+
+		.container-fluid {
+			font-family: Roboto Condensed;
+			font-size: 18px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-right: -50%;
+			/* bring your own prefixes */
+			transform: translate(-50%, -50%);
+			background-color: #66a3ff;
+		}
+
+		.container {
+			
+			background-color: #e6f0ff;
+		}
+		
+		.btn, .twitter-share-button {
+			margin-bottom: auto;
+		}
+
+		#authors {
+			text-align: right;
+		}
+
+	</style>
 
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container-fluid well well-sm">
 		<p>
 			<p><i>
-				<div id="api-test">
-					Quotes Here
+				<div class="row">
+					<div class="col-sm-12" id="api-test">
+						<blockquote><b>
+							Every day bucket guh a well, one day di bottom a guh drop out</b>
+							<p id="authors">-- Jamaican Proverb</p>
+						</blockquote>
+					</div>
 				</div>
 			</i></p>
 		</p>
 		<div class="row">
-			<div class="col-xs-2">
+			<!-- <div class="col-xs-2"> -->
+			<div class="text-center">
 				<p><button class="btn btn-info btn-responsive" id="apiBtn">Click For Quote</button></p>
+				<a id="randomTweet" class="twitter-share-button" target="_blank" href="https://twitter.com/share" data-url="https://api.myjson.com/bins/1egfa" data-size="large" data-text="Please Change!">Tweet</a>
+				<!-- </div> -->
 			</div>
 		</div>
 	</div>
